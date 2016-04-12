@@ -27,18 +27,33 @@
         
         
         </style>
+        <script>
+            function check(){
+                if (f.user.value=="AhmedGamal"){
+                    if(f.pass.value=="12345"){
+                    window.open("https://www.facebook.com/profile.php?id=100000810019201");  
+                    }
+                    else{
+                        alert("invalid password or user name");
+                    }
+                }
+                else{
+                    alert("invalid password or user name");
+                }
+            }
+               </script>
     </head>
     
     <body>
            
-        <form>
-             
+        <form name="f">
+            
             <br/><br/><br/><br/><br/><br/><h1>Welcome to Sign in page</h1><br/><br/><br/><br/><br/><br/><br/><br/>
-            <input type ="textbox" placeholder="Enter the username " class ="up"><br/><br/>
-            <input type ="password" placeholder="Enter your password " class ="up"><br/><br/><br/>
-            <input type ="submit" value="log in" class ="button" onclick="location.href='https://www.google.co.uk/';" >
-        
-        
+            <input type ="textbox" placeholder="Enter the username " class ="up" name="user"><br/><br/>
+            <input type ="password" placeholder="Enter your password " class ="up" name="pass"><br/><br/><br/>
+        <input type ="submit" value="log in" class ="button" onclick="javascript : check()">
+            
+            
         </form>
     </body>
 </html>
